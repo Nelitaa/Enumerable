@@ -5,6 +5,14 @@ class MyList
   def initialize(*args)
     @list = args
   end
+
+  def each
+    i = 0
+    while i < @list.size
+      yield @list[i]
+      i += 1
+    end
+  end
 end
 
 # Create our list
